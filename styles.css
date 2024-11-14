@@ -17,7 +17,7 @@ body {
     padding: 20px;
     height: 100vh;
     overflow-y: auto;
-    z-index: 1000; /* Ensure sidebar is on top */
+    z-index: 1000;
 }
 
 .sidebar h2 {
@@ -25,30 +25,62 @@ body {
     margin-top: 0;
 }
 
+/* Table of contents styles */
 .sidebar ul {
     list-style-type: none;
     padding: 0;
 }
 
+/* Base list item style for the TOC links */
 .sidebar ul li {
     margin: 10px 0;
 }
 
+/* Links styling */
 .sidebar ul li a {
     color: #ddd;
     text-decoration: none;
+    display: block; /* Makes the entire area clickable */
 }
 
+/* Hover effect for the links */
 .sidebar ul li a:hover {
     color: #fff;
+}
+
+/* Indentation and font-size based on heading level */
+.sidebar ul li.level-1 a {
+    font-size: 16px;
+    padding-left: 0; /* No indentation */
+}
+
+.sidebar ul li.level-2 a {
+    font-size: 14px;
+    padding-left: 15px; /* Indentation for <h2> */
+}
+
+.sidebar ul li.level-3 a {
+    font-size: 12px;
+    padding-left: 30px; /* Indentation for <h3> */
+}
+
+/* Collapsible sections */
+.collapsible {
+    display: none;
+    padding-left: 20px;
+}
+
+.collapsible a {
+    font-size: 12px;
+    padding-left: 10px;
 }
 
 /* Content styles */
 .content {
     margin-left: 270px; /* Adjust for sidebar width */
     padding: 20px;
-    width: calc(100% - 270px); /* Ensure the content takes the remaining space */
-    box-sizing: border-box; /* Ensures padding doesn't overflow */
+    width: calc(100% - 270px); /* Ensure content takes remaining space */
+    box-sizing: border-box;
 }
 
 .content h1, .content h2, .content h3 {
