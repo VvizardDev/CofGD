@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    transition: margin-left 0.3s ease; /* Smooth transition for the content */
 }
 
 /* Sidebar styles */
@@ -18,11 +19,21 @@ body {
     height: 100vh;
     overflow-y: auto;
     z-index: 1000;
+    transition: transform 0.3s ease; /* Smooth transition for the sidebar */
 }
 
-.sidebar h2 {
+/* Button to toggle sidebar visibility */
+.toggle-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
     font-size: 18px;
-    margin-top: 0;
+    z-index: 1100; /* Ensure it's above the sidebar */
 }
 
 /* Table of contents styles */
@@ -81,10 +92,17 @@ body {
     padding: 20px;
     width: calc(100% - 270px); /* Ensure content takes remaining space */
     box-sizing: border-box;
+    transition: margin-left 0.3s ease; /* Smooth transition when content adjusts */
 }
 
-.content h1, .content h2, .content h3 {
-    margin-top: 40px;
+/* Hide sidebar when toggled */
+.sidebar.hidden {
+    transform: translateX(-100%); /* Move sidebar out of view */
+}
+
+/* Hide content when sidebar is hidden */
+.content.sidebar-hidden {
+    margin-left: 20px; /* Move content to the left when sidebar is hidden */
 }
 
 /* Smooth scrolling */
