@@ -71,4 +71,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Insert the sidebar at the beginning of the body
     document.body.insertBefore(sidebar, document.body.firstChild);
+
+    // Create the toggle button
+    const toggleButton = document.createElement("button");
+    toggleButton.classList.add("toggle-btn");
+    toggleButton.textContent = "☰"; // Hamburger icon for toggling
+    document.body.appendChild(toggleButton);
+
+    // Toggle sidebar visibility when the button is clicked
+    toggleButton.addEventListener("click", function() {
+        sidebar.classList.toggle("hidden");
+        document.querySelector(".content").classList.toggle("sidebar-hidden");
+    });
 });
