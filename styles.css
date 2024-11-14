@@ -17,6 +17,7 @@ body {
     padding: 20px;
     height: 100vh;
     overflow-y: auto;
+    z-index: 1000; /* Ensure sidebar is on top */
 }
 
 .sidebar h2 {
@@ -44,9 +45,10 @@ body {
 
 /* Content styles */
 .content {
-    margin-left: 270px;
+    margin-left: 270px; /* Adjust for sidebar width */
     padding: 20px;
-    width: calc(100% - 270px);
+    width: calc(100% - 270px); /* Ensure the content takes the remaining space */
+    box-sizing: border-box; /* Ensures padding doesn't overflow */
 }
 
 .content h1, .content h2, .content h3 {
