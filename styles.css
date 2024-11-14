@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    transition: margin-left 0.3s ease; /* Smooth transition for the content */
+    transition: margin-left 0.3s ease;
 }
 
 /* Sidebar styles */
@@ -19,7 +19,7 @@ body {
     height: 100vh;
     overflow-y: auto;
     z-index: 1000;
-    transition: transform 0.3s ease; /* Smooth transition for the sidebar */
+    transition: transform 0.3s ease;
 }
 
 /* Button to toggle sidebar visibility */
@@ -33,7 +33,7 @@ body {
     border: none;
     cursor: pointer;
     font-size: 18px;
-    z-index: 1100; /* Ensure it's above the sidebar */
+    z-index: 1100;
 }
 
 /* Table of contents styles */
@@ -51,7 +51,7 @@ body {
 .sidebar ul li a {
     color: #ddd;
     text-decoration: none;
-    display: block; /* Makes the entire area clickable */
+    display: block;
 }
 
 /* Hover effect for the links */
@@ -59,20 +59,20 @@ body {
     color: #fff;
 }
 
-/* Indentation and font-size based on heading level */
+/* Indentation based on heading level */
 .sidebar ul li.level-1 a {
     font-size: 16px;
-    padding-left: 0; /* No indentation */
+    padding-left: 0;
 }
 
 .sidebar ul li.level-2 a {
     font-size: 14px;
-    padding-left: 15px; /* Indentation for <h2> */
+    padding-left: 15px;
 }
 
 .sidebar ul li.level-3 a {
     font-size: 12px;
-    padding-left: 30px; /* Indentation for <h3> */
+    padding-left: 30px;
 }
 
 /* Collapsible sections */
@@ -92,17 +92,17 @@ body {
     padding: 20px;
     width: calc(100% - 270px); /* Ensure content takes remaining space */
     box-sizing: border-box;
-    transition: margin-left 0.3s ease; /* Smooth transition when content adjusts */
+    transition: margin-left 0.3s ease;
 }
 
 /* Hide sidebar when toggled */
 .sidebar.hidden {
-    transform: translateX(-100%); /* Move sidebar out of view */
+    transform: translateX(-100%);
 }
 
 /* Hide content when sidebar is hidden */
 .content.sidebar-hidden {
-    margin-left: 20px; /* Move content to the left when sidebar is hidden */
+    margin-left: 20px;
 }
 
 /* Smooth scrolling */
